@@ -24,7 +24,6 @@
         order by type desc, create_time desc
         limit #{offset}, #{limit}
     </select>
-
     <!--这里resultType可声明可不声明因为是springboot知道的类型-->
     <select id="selectDiscussPostRows" resultType="int">
         select count(id)
@@ -34,4 +33,5 @@
             and user_id = #{userId}
         </if>
     </select>
+
 </mapper>
